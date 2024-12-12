@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 function Nav() {
   return (
-    <div className='flex items-center justify-between text-[0.9rem] pop px-[3em] py-[1em] bg-[--gray] absolute top-0 w-full'>
+    <div className='flex items-center justify-between text-[0.9rem] pop px-[--pdx] py-[1em] bg-[--gray] absolute top-0 w-full'>
         <ul className='flex items-center gap-[10px]'>
             <li><a href="#">israelshedrack913@gmail.com</a></li>
             <motion.button

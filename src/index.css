@@ -4,7 +4,8 @@
 
 
 :root {
-    --gray: #ECEBEA;
+    --pdx: 3em;
+    --gray: #dddcda;
     --white: #FFFFFE;
     --black: black
 }
