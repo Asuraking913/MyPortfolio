@@ -22,7 +22,7 @@ function Services() {
     const servicesList = services.map((items, i) => (<ServiceBox key={i} index={i}  name={items.name} text={items.text}/>))
 
   return (
-    <section className='min-h-[80vh] bg-[--gray] rounded-t-[4em] flex items-center justify-center flex-col px-[--pdx] gap-[70px] mt-[20px]'>
+    <section className='min-h-[80vh] bg-[--gray] rounded-t-[4em] rounded-b-[4em] flex items-center justify-center flex-col px-[--pdx] gap-[70px] mt-[20px]'>
         <div className='w-[50%] h-[80%] flex flex-col items-center gap-[20px]'>
             <h2 className='text-[2rem] urba font-semibold text-center'>Collaborate with me to bring your ideas to life</h2>
 
