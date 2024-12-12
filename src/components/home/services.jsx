@@ -14,12 +14,12 @@ function Services() {
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsum ipsam, enim laboriosam cum nihil modi incidunt nostrum magnam sit vitae inventore veniam cumque tempore error alias quas dolor ut."
         },
         {
-            name: "Frontend Development", 
+            name: "Web Scraping", 
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsum ipsam, enim laboriosam cum nihil modi incidunt nostrum magnam sit vitae inventore veniam cumque tempore error alias quas dolor ut."
         },
     ]
 
-    const servicesList = services.map((items, i) => (<ServiceBox name={items.name} text={items.text}/>))
+    const servicesList = services.map((items, i) => (<ServiceBox key={i} index={i}  name={items.name} text={items.text}/>))
 
   return (
     <section className='min-h-[80vh] bg-[--gray] rounded-t-[4em] flex items-center justify-center flex-col px-[--pdx] gap-[70px] mt-[20px]'>

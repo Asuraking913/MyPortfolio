@@ -4,6 +4,7 @@ import image from "../assets/image.jpg"
 import { motion } from "framer-motion"
 import Skills from '../components/home/skills'
 import Services from '../components/home/services'
+import Contact from '../components/home/contact'
 
 function Home() {
   return (
@@ -88,6 +89,8 @@ function Home() {
         <Skills />
 
         <Services />
+
+        <Contact />
     </article>
   )
 }
