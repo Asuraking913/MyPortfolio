@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root {
+    --gray: #ECEBEA;
+    --white: #FFFFFE;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+
+.pop {
+    font-family: poppins;
+}

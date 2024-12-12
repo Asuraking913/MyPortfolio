@@ -1,8 +1,14 @@
 import React from 'react'
+import Nav  from '../components/home/nav'
 
 function Home() {
   return (
-    <div>Home</div>
+    <article className='relative'>
+        <Nav />
+        <section className='h-screen bg-[--gray]'>
+
+        </section>
+    </article>
   )
 }
 
