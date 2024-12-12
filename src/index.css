@@ -6,6 +6,7 @@
 :root {
     --gray: #ECEBEA;
     --white: #FFFFFE;
+    --black: black
 }
 
 @font-face {
@@ -13,6 +14,24 @@
     src: url("./assets/fonts/Poppins-Regular.ttf");
 }
 
+@font-face {
+    font-family: ubun;
+    src: url("./assets/fonts/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+    font-family: urba;
+    src: url("./assets/fonts/Urbanist-Regular.ttf");
+}
+
 .pop {
     font-family: poppins;
+}
+
+.ubun {
+    font-family: ubun;
+}
+
+.urba {
+    font-family: urba;
 }
