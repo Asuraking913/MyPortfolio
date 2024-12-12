@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import Skills from '../components/home/skills'
 import Services from '../components/home/services'
 import Contact from '../components/home/contact'
+import Foot from '../components/home/foot'
 
 function Home() {
   return (
@@ -91,6 +92,8 @@ function Home() {
         <Services />
 
         <Contact />
+
+        <Foot />
     </article>
   )
 }
