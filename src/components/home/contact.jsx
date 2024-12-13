@@ -6,7 +6,7 @@ function Contact() {
     <section className='min-h-[80vh] flex flex-col items-center justify-center'>
       <div className='w-[50%] flex flex-col justify-center gap-[20px] items-center px-[10px]'>
 
-        <div className='text-[4rem] p-[20px] rounded-full bg-[--white] border-[1px] border-[--black]'>
+        <div className='text-[4rem] p-[20px] rounded-full bg-[--white] border-[1px] border-[--gray]'>
           <FaRegHandshake />
         </div>
 
@@ -18,7 +18,7 @@ function Contact() {
             Email Me
           </button>
 
-          <button className='bg-[--white] text-[--black] border-[1px] border-[--black] p-[15px] px-[20px] rounded-[2em]'>
+          <button className='bg-[--white] text-[--black] border-[1px]  border-[--black] p-[15px] px-[20px] rounded-[2em]'>
             WhatsApp
           </button>
 

@@ -86,14 +86,14 @@ function Home() {
 
 
         </section>
-
+{/* 
         <Skills />
 
         <Services />
 
         <Contact />
 
-        <Foot />
+        <Foot /> */}
     </article>
   )
 }

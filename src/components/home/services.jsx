@@ -50,10 +50,12 @@ function Services() {
             }}
 
             whileInView={{
-                rotate: ["10deg", "-20deg"]
+                rotate: ["10deg", "-10deg"]
             }}
-             className='urba p-[10px] px-[30px] bg-[--white] rounded-[2em] font-semibold'>Services</motion.h3>
-
+             className='urba p-[10px] px-[30px] bg-[--white] rounded-[2em] font-semibold'>
+                Services
+            </motion.h3>
+n
             
         </div>
 
