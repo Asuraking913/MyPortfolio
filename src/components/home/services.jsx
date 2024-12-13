@@ -22,8 +22,8 @@ function Services() {
     const servicesList = services.map((items, i) => (<ServiceBox key={i} index={i}  name={items.name} text={items.text}/>))
 
   return (
-    <section className='min-h-[80vh] bg-[--gray] rounded-t-[4em] rounded-b-[4em] flex items-center justify-center flex-col px-[--pdx] gap-[70px] mt-[20px]'>
-        <div className='w-[50%] h-[80%] flex flex-col items-center gap-[20px]'>
+    <section className='min-h-[80vh] bg-[--gray] rounded-t-[2em] sm:rounded-t-[4em] sm:rounded-b-[4em] rounded-b-[2em] flex items-center justify-center flex-col sm:px-[--pdx] px-[1em] gap-[40px] sm:gap-[70px] mt-[20px]'>
+        <div className='sm:w-[50%] py-[1em] px-[1em] h-[80%] flex flex-col items-center gap-[20px]'>
             <motion.h2
             initial={{
                 x: "-2em", 
@@ -38,7 +38,7 @@ function Services() {
                 x: 0, 
                 opacity: [0, 1]
             }}
-             className='text-[2rem] urba font-semibold text-center'>Collaborate with me to bring your ideas to life</motion.h2>
+             className='sm:text-[2rem] text-[1.5rem] urba font-semibold text-center'>Collaborate with me to bring your ideas to life</motion.h2>
 
             <motion.h3
             initial={{
@@ -52,14 +52,13 @@ function Services() {
             whileInView={{
                 rotate: ["10deg", "-10deg"]
             }}
-             className='urba p-[10px] px-[30px] bg-[--white] rounded-[2em] font-semibold'>
+             className='urba sm:p-[10px] p-[5px] sm:text-[1rem] text-[0.9rem] sm:px-[30px] px-[20px] bg-[--white] rounded-[2em] font-semibold'>
                 Services
             </motion.h3>
-n
             
         </div>
 
-        <div className='flex items-center justify-between w-full px-[10%]'>
+        <div className='flex items-center justify-center gap-[20px] sm:justify-between w-full sm:px-[10%] sm:flex-row flex-col'>
             {servicesList}
         </div>
     </section>

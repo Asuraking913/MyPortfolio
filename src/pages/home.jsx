@@ -11,9 +11,9 @@ function Home() {
   return (
     <article className='relative'>
         <Nav />
-        <section className='h-screen bg-[--gray] flex items-center justify-center w-full rounded-b-[4em]'>
+        <section className='h-screen bg-[--gray] flex items-center justify-center w-full rounded-b-[2em] sm:rounded-b-[4em]'>
 
-          <div className='flex items-center justify-center flex-col w-[50%] gap-[20px]'>
+          <div className='flex items-center justify-center flex-col sm:w-[50%] px-[1em] gap-[20px]'>
 
             <motion.figure
             initial={{
@@ -63,7 +63,7 @@ function Home() {
             transition={{
               duration: 1.5
             }}
-             className='text-[3rem] urba text-center font-semibold capitalize'>Crafting exceptional digital products, brands, and experiences.</motion.h1>
+             className='sm:text-[3rem] text-[2.5rem] urba text-center font-semibold capitalize'>Crafting exceptional digital products, brands, and experiences.</motion.h1>
             
             <motion.button
             initial={{
@@ -86,14 +86,14 @@ function Home() {
 
 
         </section>
-{/* 
+
         <Skills />
 
         <Services />
 
         <Contact />
 
-        <Foot /> */}
+        <Foot />
     </article>
   )
 }

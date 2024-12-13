@@ -9,7 +9,7 @@ import { motion } from "framer-motion"
 function Skills() {
   return (
     <section className='flex justify-center'>
-        <div className='flex items-center justify-center gap-[30px] '>
+        <div className='sm:flex grid grid-cols-2 items-center justify-center gap-[30px] '>
             <motion.img
             initial={{
               opacity: 0
@@ -22,7 +22,7 @@ function Skills() {
             transition={{
               duration: 1.5
             }}
-             src={flask} className='w-[250px] object-cover' alt="" />
+             src={flask} className='sm:w-[250px] w-[150px] object-cover' alt="" />
             <motion.img
             initial={{
               opacity: 0
@@ -35,7 +35,7 @@ function Skills() {
             transition={{
               duration: 1.5
             }}
-             src={django} className='w-[250px] object-cover' alt="" />
+             src={django} className='sm:w-[250px] w-[150px] object-cover' alt="" />
             <motion.img
             initial={{
               opacity: 0
@@ -48,7 +48,7 @@ function Skills() {
             transition={{
               duration: 1.5
             }}
-             src={github} className='w-[250px] object-cover' alt="" />
+             src={github} className='sm:w-[250px] w-[150px] object-cover' alt="" />
             <motion.img
             initial={{
               opacity: 0
@@ -61,7 +61,7 @@ function Skills() {
             transition={{
               duration: 1.5
             }}
-             src={vercel} className='w-[250px] object-cover' alt="" />
+             src={vercel} className='sm:w-[250px] w-[150px] object-cover' alt="" />
         </div>
     </section>
   )
