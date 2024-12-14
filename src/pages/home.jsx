@@ -11,7 +11,7 @@ function Home() {
   return (
     <article className='relative'>
         <Nav />
-        <section className='h-screen bg-[--gray] flex items-center justify-center w-full rounded-b-[2em] sm:rounded-b-[4em]'>
+        <section className='h-screen bg-[--gray] flex items-center justify-center w-full rounded-b-[1em] sm:rounded-b-[4em]'>
 
           <div className='flex items-center justify-center flex-col sm:w-[50%] px-[1em] gap-[20px]'>
 
@@ -71,7 +71,7 @@ function Home() {
               y: "20px"
             }}
 
-            animate={{
+            whileInView={{
               opacity: 1,
               y: "0px"
             }}

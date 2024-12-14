@@ -22,7 +22,7 @@ function Services() {
     const servicesList = services.map((items, i) => (<ServiceBox key={i} index={i}  name={items.name} text={items.text}/>))
 
   return (
-    <section className='min-h-[80vh] bg-[--gray] rounded-t-[2em] sm:rounded-t-[4em] sm:rounded-b-[4em] rounded-b-[2em] flex items-center justify-center flex-col sm:px-[--pdx] px-[1em] gap-[40px] sm:gap-[70px] mt-[20px]'>
+    <section className='min-h-[80vh] bg-[--gray] rounded-t-[1em] sm:rounded-t-[4em] sm:rounded-b-[4em] rounded-b-[1em] flex items-center justify-center flex-col sm:px-[--pdx] px-[1em] gap-[40px] sm:gap-[70px] mt-[20px]'>
         <div className='sm:w-[50%] py-[1em] px-[1em] h-[80%] flex flex-col items-center gap-[20px]'>
             <motion.h2
             initial={{

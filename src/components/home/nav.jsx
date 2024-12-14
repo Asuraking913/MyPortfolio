@@ -49,7 +49,7 @@ function Nav() {
           exit={{
             x: "200px"
           }}
-           className='absolute w-[200px] p-[10px] rounded-[5px] text-center right-0 top-0 m-[10px] bg-[--white]'>Text has been copied successfully
+           className='absolute w-[250px] p-[10px] rounded-[5px] text-center right-0 top-0 m-[10px] bg-[--white]'>email copied successfully
            </motion.p>
          }
 
