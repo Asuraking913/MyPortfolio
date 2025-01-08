@@ -6,6 +6,7 @@ import Skills from '../components/home/skills'
 import Services from '../components/home/services'
 import Contact from '../components/home/contact'
 import Foot from '../components/home/foot'
+import Projects from '../components/home/projects'
 
 function Home() {
   return (
@@ -90,6 +91,8 @@ function Home() {
         <Skills />
 
         <Services />
+
+        <Projects />
 
         <Contact />
 
