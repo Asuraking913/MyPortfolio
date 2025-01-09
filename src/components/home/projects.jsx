@@ -19,35 +19,41 @@ function Projects() {
         img: [resto1, resto2, resto3, resto4],
         name: "Kans Resto", 
         descp: "An ecommerce restaurant website to display available menu and their relative prices", 
-        link: "resto"
+        link: "https://resto-kans.vercel.app/", 
+        skills: "HTML, CSS, Javascript, React, Python, Django, Sqlite/Postgres"
     }, 
     {
       img: [chef, chef1, chef2],
       name: "Chef gods", 
       descp: "Landing page for a restaurant website", 
-      link: "chef"
+      link: "https://restaurant-website-one-sigma.vercel.app/",
+      skills: "HTML, CSS/SCSS"
+
     },
     {
       img: [belle],
       name: "Belle", 
       descp: "Jewelry store Website", 
-      link: "belle"
+      link: "https://shop-cart-website-hng.vercel.app/", 
+      skills: "HTML/CSS, Javascript, React"
+      
     },
     {
       img: [mystic, mystic1, mystic2],
       name: "Mystic Reads", 
       descp: "Social Media Website for reading novels", 
-      link: "mystic"
+      link: "https://mystic-reads.vercel.app/", 
+      skills: "HTML/CSS, Javascript, Python, Flask, Postgres"
     },
  ]
 
- const projects = projectList.map((items, i) => <ProjectComp images={items.img} name={items.name} link={items.link} descp={items.descp}/>)
+ const projects = projectList.map((items, i) => <ProjectComp images={items.img} name={items.name} skill={items.skills} link={items.link} descp={items.descp}/>)
 
   return (
    <section className='min-h-[60vh] py-[2em] sm:px-[--pdx]'>
         <h2 className='sm:text-[2rem] text-[1.5rem] urba font-semibold text-center'>Some of My Projects</h2>
 
-        <div className='grid grid-cols-3 gap-[20px]'>
+        <div className='grid grid-cols-2 gap-[20px] mt-[20px]'>
           {projects}
         </div>
    </section>
