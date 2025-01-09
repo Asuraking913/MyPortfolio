@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Nav  from '../components/home/nav'
 import image from "../assets/image.jpg"
 import { motion } from "framer-motion"
@@ -9,6 +9,9 @@ import Foot from '../components/home/foot'
 import Projects from '../components/home/projects'
 
 function Home() {
+
+  const projectRef = useRef()
+
   return (
     <article className='relative'>
         <Nav />
@@ -80,7 +83,7 @@ function Home() {
             transition={{
               duration: 1.5
             }}
-             className='pop text-[0.9rem] p-[15px] px-[30px] bg-[--black] text-[--white] rounded-[30px] font-semibold'>
+             className='pop text-[0.9rem] p-[15px] px-[30px] bg-[--black] text-[--white] rounded-[30px] font-semibold' onClick={() => projectRef.current.scrollIntoView({behavior: "smooth"})}>
               Latest Projects
             </motion.button>
           </div>
@@ -92,7 +95,7 @@ function Home() {
 
         <Services />
 
-        <Projects />
+        <Projects projectRef={projectRef}/>
 
         <Contact />
 
