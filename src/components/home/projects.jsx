@@ -10,6 +10,7 @@ import belle from "../../assets/pics/belle.jpg"
 import mystic from "../../assets/pics/mystic.jpg"
 import mystic1 from "../../assets/pics/mystic1.jpg"
 import mystic2 from "../../assets/pics/mystic2.jpg"
+import ProjectComp from './projectComp'
 
 function Projects() {
 
@@ -33,19 +34,21 @@ function Projects() {
       link: "belle"
     },
     {
-      img: [],
+      img: [mystic, mystic1, mystic2],
       name: "Mystic Reads", 
       descp: "Social Media Website for reading novels", 
       link: "mystic"
     },
  ]
 
+ const projects = projectList.map((items, i) => <ProjectComp images={items.img} name={items.name} link={items.link} descp={items.descp}/>)
+
   return (
-   <section className='min-h-[60vh] py-[2em]'>
+   <section className='min-h-[60vh] py-[2em] sm:px-[--pdx]'>
         <h2 className='sm:text-[2rem] text-[1.5rem] urba font-semibold text-center'>Some of My Projects</h2>
 
-        <div>
-
+        <div className='grid grid-cols-3 gap-[20px]'>
+          {projects}
         </div>
    </section>
   )
