@@ -1,9 +1,27 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import {Swiper, SwiperSlide} from "swiper/react"
+import {Navigation, Pagination, Autoplay} from "swiper/modules"
+import "swiper/css"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
 
 function ProjectComp({images, name, descp, link, skill}) {
 
   const [moreImages, setMoreImages] = useState(false)
+  const imagesList = images.map((items, i) => 
+  <SwiperSlide
+  key={i}
+  >
+    <div className='h-[400px] overflow-scroll hide-scrollbar'>
+      <img className='sm:w-[600px] w-[100%] object-cover' src={items} alt="" />
+    </div>
+  </SwiperSlide>
+  )
+
+  const screenWidth = window.innerWidth
+
+  console.log(screenWidth)
 
 
   return (
@@ -16,14 +34,14 @@ function ProjectComp({images, name, descp, link, skill}) {
         
         <div className='flex flex-col'>
           <h3 className='urba sm:text-[2rem] text-[1.5rem] font-semibold'>{name}</h3>
-          <p className='pop text-[0.9rem]'>{descp}</p>
+          <p className='pop sm:text-[0.9rem] text-[0.8rem]'>{descp}</p>
         </div>
 
-        <p className='pop text-[0.9rem]'><span className='font-bold'>Skills Required:</span> {skill}</p>
+        <p className='pop sm:text-[0.9rem] text-[0.8rem]'><span className='font-bold'>Skills Required:</span> {skill}</p>
 
 
         <div className='flex items-center justify-between w-full'>
-          <Link to={`${link}`} className='pop text-[0.9rem] underline sm:hover:opacity-60 sm:w-full w-[80%]'>
+          <Link to={`${link}`} className='pop sm:text-[0.9rem] text-[0.8rem] underline sm:hover:opacity-60 sm:w-full w-[80%]'>
             {link}
           </Link>
 
@@ -36,7 +54,20 @@ function ProjectComp({images, name, descp, link, skill}) {
       {
         moreImages &&
 
-        <div className='fixed h-screen w-full bg-[black]'>
+        <div className='fixed top-0 left-0 h-screen w-full bg-[#00000057] flex items-center justify-center px-[--pdx]'>
+          
+          <Swiper
+              modules={[Pagination, Navigation, Autoplay]}
+              spaceBetween={10}
+              slidesPerView={images.length > 1 ? screenWidth < 480 ? 1 : 2 : 1}
+              
+              loop = {true}
+              // autoplay = {{delay: 4500}}
+              navigation = {true}
+              pagination = {{clickable: true}}
+              >
+                {imagesList}
+          </Swiper>
 
         </div>
       }
