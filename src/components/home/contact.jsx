@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FaRegHandshake } from "react-icons/fa6";
 import { motion } from "framer-motion"
+import LinkContext from '../../utils/contextProvider';
 
 function Contact() {
+
+ const { whatsapp } = useContext(LinkContext)
+
   return (
     <section className='sm:min-h-[80vh] min-h-[60vh] flex flex-col items-center justify-center'>
       <div className='sm:w-[50%] px-[1em] flex flex-col justify-center gap-[20px] items-center sm:px-[10px]'>
@@ -50,6 +54,10 @@ function Contact() {
             scale: 1
           }}
 
+          whileHover={{
+            scale: 1.15, 
+          }}
+
           transition={{
             duration: 0.4
           }}
@@ -57,7 +65,8 @@ function Contact() {
             Email Me
           </motion.button>
 
-          <motion.button
+          <motion.a
+          href={`${whatsapp}`}
           initial={{
           scale: 0.5
           }}
@@ -66,12 +75,16 @@ function Contact() {
             scale: 1
           }}
 
+          whileHover={{
+            scale: 1.15, 
+          }}
+
           transition={{
             duration: 0.4
           }}
            className='bg-[--white] text-[--black] border-[1px]  border-[--black] p-[15px] px-[20px] rounded-[2em]'>
             WhatsApp
-          </motion.button>
+          </motion.a>
 
         </div>
       </div>

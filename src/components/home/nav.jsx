@@ -31,8 +31,6 @@ function Nav() {
      
   }, 3000, [copied])
 
-  console.log(twitter, whatsapp, linkedIn)
-
   return (
     <div className='flex sm:items-center items-start justify-between text-[0.9rem] pop sm:px-[--pdx] px-[1em] py-[1em] bg-[--gray] absolute top-0 w-full'>
 
@@ -119,17 +117,29 @@ function Nav() {
           whileTap={{
             scale:1.2
           }}
-           className='text-blue-500'><FaLinkedin /></motion.li>
+           className='text-blue-500'>
+            <a href={`${linkedIn}`}>
+              <FaLinkedin />
+            </a>
+          </motion.li>
           <motion.li
           whileTap={{
             scale:1.2
           }}
-           className='text-green-500'><FaWhatsapp /></motion.li>
+           className='text-green-500'>
+            <a href={`${whatsapp}`}>
+              <FaWhatsapp />
+            </a>
+          </motion.li>
           <motion.li
           whileTap={{
             scale:1.2
           }}
-          ><FaXTwitter /></motion.li>
+          >
+            <a href={`${linkedIn}`}>
+              <FaXTwitter />
+            </a>
+          </motion.li>
         </motion.ul>
         
         }

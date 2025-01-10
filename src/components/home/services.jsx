@@ -7,22 +7,22 @@ function Services() {
     const services = [
         {
             name: "Frontend Web Development", 
-            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsum ipsam, enim laboriosam cum nihil modi incidunt nostrum magnam sit vitae inventore veniam cumque tempore error alias quas dolor ut."
+            text: "I have proven track record in creating intuitive user interfaces that are responsive and functional to devices of various types. With technologies such as HTML, CSS/SCSS, Javascript and Reactjs i am able to create modern web site designs, collaborate with UI/UX designers bring their design ideas to life. I have good collaboration and communication skills enabling me to work with backend developers"
         },
         {
             name: "Backend Web Development", 
-            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsum ipsam, enim laboriosam cum nihil modi incidunt nostrum magnam sit vitae inventore veniam cumque tempore error alias quas dolor ut."
+            text: "My skills set also extends to backend development, where i leverage python to build backend APIs using Django and Flask.Using Flask i have built full stack applications using React for the frontend and Flask for the backend. I am able to create API enpoints with flask that perform CRUD operations on the relational database systems like MySQL and PostgreSQL using Flask SQLAlchemy as an object relationaly mapper.   "
         },
         {
             name: "Web Scraping", 
-            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsum ipsam, enim laboriosam cum nihil modi incidunt nostrum magnam sit vitae inventore veniam cumque tempore error alias quas dolor ut."
+            text: "I have experience using Python's Selenium library for web scraping, allowing me to extract data from websites, including those with dynamic and JavaScript-driven content."
         },
     ]
 
     const servicesList = services.map((items, i) => (<ServiceBox key={i} index={i}  name={items.name} text={items.text}/>))
 
   return (
-    <section className='min-h-[80vh] bg-[--gray] rounded-t-[1em] sm:rounded-t-[4em] sm:rounded-b-[4em] rounded-b-[1em] flex items-center justify-center flex-col sm:px-[--pdx] px-[1em] gap-[40px] sm:gap-[70px] mt-[20px]'>
+    <section className='min-h-[80vh] bg-[--gray] rounded-t-[1em] sm:rounded-t-[4em] sm:rounded-b-[4em] rounded-b-[1em] flex items-center justify-center flex-col sm:px-[--pdx] px-[1em] gap-[40px] sm:gap-[70px] mt-[20px] py-[20px]'>
         <div className='sm:w-[50%] py-[1em] px-[1em] h-[80%] flex flex-col items-center gap-[20px]'>
             <motion.h2
             initial={{

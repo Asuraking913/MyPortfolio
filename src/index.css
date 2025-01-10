@@ -22,26 +22,29 @@
 @font-face {
     font-family: poppins;
     src: url("./assets/fonts/Poppins-Regular.ttf");
+    font-display: swap;
 }
 
-@font-face {
+/* @font-face {
     font-family: ubun;
     src: url("./assets/fonts/Ubuntu-Regular.ttf");
-}
+} */
 
 @font-face {
     font-family: urba;
     src: url("./assets/fonts/Urbanist-Regular.ttf");
+    font-display: swap;
+
 }
 
 .pop {
-    font-family: poppins;
+    font-family: poppins, sans-serif;
 }
 
-.ubun {
+/* .ubun {
     font-family: ubun;
-}
+} */
 
 .urba {
-    font-family: urba;
+    font-family: urba, sans-serif;
 }
