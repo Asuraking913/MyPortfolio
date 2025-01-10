@@ -50,7 +50,7 @@ function Projects({projectRef}) {
  const projects = projectList.map((items, i) => <ProjectComp key={i} images={items.img} name={items.name} skill={items.skills} link={items.link} descp={items.descp}/>)
 
   return (
-   <section ref={projectRef} className='min-h-[60vh] py-[2em] sm:px-[--pdx] px-[1em]'>
+   <section ref={projectRef} className='min-h-[60vh] py-[2em] sm:px-[--pdx]'>
         <h2 className='sm:text-[2rem] text-[1.5rem] urba font-semibold text-center'>Some of My Projects</h2>
 
         <div className='grid sm:grid-cols-2 grid-cols-1 gap-[20px] mt-[20px]'>

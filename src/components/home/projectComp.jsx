@@ -5,6 +5,7 @@ import {Navigation, Pagination, Autoplay} from "swiper/modules"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
+import { FaTimes } from 'react-icons/fa'
 
 function ProjectComp({images, name, descp, link, skill}) {
 
@@ -13,15 +14,13 @@ function ProjectComp({images, name, descp, link, skill}) {
   <SwiperSlide
   key={i}
   >
-    <div className='h-[400px] overflow-scroll hide-scrollbar'>
-      <img className='sm:w-[600px] w-[100%] object-cover' src={items} alt="" />
+    <div className='max-h-[400px] overflow-scroll hide-scrollbar'>
+      <img className='sm:w-[600px] w-[100%] object-cover ' src={items} alt="" />
     </div>
   </SwiperSlide>
   )
 
   const screenWidth = window.innerWidth
-
-  console.log(screenWidth)
 
 
   return (
@@ -45,7 +44,7 @@ function ProjectComp({images, name, descp, link, skill}) {
             {link}
           </Link>
 
-          <button onClick={() => {setMoreImages(prev => true); console.log(moreImages)}} className='pop sm:text-[0.9rem] p-[8px] sm:p-[10px] bg-[--black] text-[--white] rounded-[5px] sm:hover:opacity-60 sm:hover:scale-105 duration-[0.2s]'>
+          <button onClick={() => {setMoreImages(prev => true)}} className='pop sm:text-[0.9rem] p-[8px] sm:p-[10px] bg-[--black] text-[--white] rounded-[5px] sm:hover:opacity-60 sm:hover:scale-105 duration-[0.2s]'>
             Images
           </button>
         </div>
@@ -54,7 +53,7 @@ function ProjectComp({images, name, descp, link, skill}) {
       {
         moreImages &&
 
-        <div className='fixed top-0 left-0 h-screen w-full bg-[#00000057] flex items-center justify-center px-[--pdx]'>
+        <div className='fixed top-0 left-0 h-screen w-full bg-[#00000057] flex items-center justify-center sm:px-[--pdx] px-[10px]'>
           
           <Swiper
               modules={[Pagination, Navigation, Autoplay]}
@@ -65,9 +64,14 @@ function ProjectComp({images, name, descp, link, skill}) {
               // autoplay = {{delay: 4500}}
               navigation = {true}
               pagination = {{clickable: true}}
+              className='w-[95%] z-20'
               >
                 {imagesList}
           </Swiper>
+
+          <button onClick={() => setMoreImages(false)} className='fixed top-[80%] text-[4rem] text-[--white]'>
+            <FaTimes />
+          </button>
 
         </div>
       }

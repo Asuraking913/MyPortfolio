@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { motion } from "framer-motion"
 import { RiMenu3Line } from "react-icons/ri";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { useInterval } from 'react-use';
+import LinkContext from '../../utils/contextProvider';
 
 
 
@@ -15,6 +16,7 @@ function Nav() {
   const [copied, setCopied] = useState(false)
 
   const email = "israelshedrack913@gmail.com"
+  const {twitter, whatsapp, linkedIn} = useContext(LinkContext)
 
   const copyToClipBoard = () => {
     navigator.clipboard.writeText(email)
@@ -28,6 +30,8 @@ function Nav() {
     }
      
   }, 3000, [copied])
+
+  console.log(twitter, whatsapp, linkedIn)
 
   return (
     <div className='flex sm:items-center items-start justify-between text-[0.9rem] pop sm:px-[--pdx] px-[1em] py-[1em] bg-[--gray] absolute top-0 w-full'>
@@ -75,9 +79,9 @@ function Nav() {
         </ul>
 
         <ul className='sm:flex hidden items-center gap-[20px] '>
-            <li className='sm:hover:scale-110 duration-[0.5s] sm:hover:underline'><a href="">LinkedIn</a></li>
-            <li className='sm:hover:scale-110 duration-[0.5s] sm:hover:underline'><a href="">Twitter</a></li>
-            <li className='sm:hover:scale-110 duration-[0.5s] sm:hover:underline'><a href="">Whatsapp</a></li>
+            <li className='sm:hover:scale-110 duration-[0.5s] sm:hover:underline'><a href={`${linkedIn}`}>LinkedIn</a></li>
+            <li className='sm:hover:scale-110 duration-[0.5s] sm:hover:underline'><a href={`${twitter}`}>Twitter</a></li>
+            <li className='sm:hover:scale-110 duration-[0.5s] sm:hover:underline'><a href={`${whatsapp}`}>Whatsapp</a></li>
         </ul>
 
 
