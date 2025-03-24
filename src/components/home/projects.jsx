@@ -11,10 +11,27 @@ import mystic from "../../assets/pics/mystic.jpg"
 import mystic1 from "../../assets/pics/mystic1.jpg"
 import mystic2 from "../../assets/pics/mystic2.jpg"
 import ProjectComp from './projectComp'
+import bot from "./../../assets/pics/bot.jpg"
+import bot1 from "./../../assets/pics/bot1.jpg"
+import web3 from "../../assets/pics/web3.jpg"
 
 function Projects({projectRef}) {
 
  const projectList = [
+  {
+        img: [web3],
+        name: "Typescript Dashboard", 
+        descp: "A Website dashboard built using React and Typescript along with Tailwindcss for styling", 
+        link: "https://dashboard-zmxy.vercel.app/", 
+        skills: "Reactjs, Typescript, TailwindCSS"
+  }, 
+  {
+        img: [bot1, bot],
+        name: "Discord bot", 
+        descp: "A Discord bot built with python that pulls stock data from the alpha vantage API and displays the formated data in a designated discord channel", 
+        link: "", 
+        skills: "Python, python's IMAP library, python's discor library for connecting to the bot"
+    }, 
     {
         img: [resto1, resto2, resto3, resto4],
         name: "Kans Resto", 
