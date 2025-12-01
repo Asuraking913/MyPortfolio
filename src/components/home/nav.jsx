@@ -32,7 +32,7 @@ function Nav() {
   }, 3000, [copied])
 
   return (
-    <div className='flex sm:items-center items-start justify-between text-[0.9rem] pop sm:px-[--pdx] px-[1em] py-[1em] bg-[--gray] absolute top-0 w-full'>
+    <div className='flex sm:items-center z-[20] items-start justify-between text-[0.9rem] pop sm:px-[--pdx] px-[1em] py-[1em] bg-[--gray] absolute top-0 w-full'>
 
         { copied && 
           <motion.p
